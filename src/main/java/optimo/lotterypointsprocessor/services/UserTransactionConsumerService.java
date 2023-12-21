@@ -83,7 +83,6 @@ public class UserTransactionConsumerService {
 
                     //throw call in kafka pont_processed topic
                     kafkaTemplate.send(Constants.POINT_PROCESSED, objectMapper.writeValueAsString(transaction));
-
                 }
             }
         } catch (Exception e) {
