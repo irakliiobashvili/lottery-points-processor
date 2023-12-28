@@ -13,6 +13,8 @@ public interface RoundRepository extends JpaRepository<Round, Long>, JpaSpecific
             select *
             from LOTTERY_DEV.ROUNDS
             where (sysdate between ROUND_START and ROUND_END)
+            and IS_ACTIVE = 1
+            and FINISHED <> 1
             """, nativeQuery = true)
     Round activeRound();
 }
