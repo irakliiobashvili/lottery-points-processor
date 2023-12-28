@@ -58,6 +58,7 @@ public class UserTransactionConsumerService {
 
             if (genericTransactionTypeDtoForGroupValidation.getPointAmount() > 0) {
                 //Active Round
+
                 Round activeRound = roundRepository.activeRound();
                 //find Transaction if exist record by action and action_tran_id (if exist does not make transaction)
                 long tranByActionAndActionTranId = transactionRepository.findByActionAndActionTransactionId
